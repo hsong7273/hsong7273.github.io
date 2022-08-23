@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hasung Song</title>
+		<!-- Fomantic UI -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.7/semantic.min.js"></script>
+		<!-- My Code -->
+		<script src="main.js"></script>
+
+		</head>
+	<body> 
+		<div class="ui container">
+			<h1 class="ui header">Hasung Song</h1>
+			<!-- <h2 class="ui header">PhD Candidate</h2> -->
+		</div>
+		<div class="ui fluid three item pointing menu">
+			<div class="ui dropdown item">
+				Research <i class="dropdown icon"></i>
+				<div class="menu">
+					<ul class="item" onclick="showcontent('KamLAND-Zen')">KamLAND-Zen</ul>
+					<ul class="item" onclick="showcontent('THEIA')">THEIA</ul>
+					<ul class="item" onclick="showcontent('CMS-NIM+')">CMS (NIM+)</ul>
+				</div>
+				
+			</div>
+			<a class="item" onclick="showcontent('CV')">
+				CV
+			</a>
+			<a class="item" onclick="showcontent('AboutMe')">
+				About Me
+			</a>
+		</div>
+
+		<!-- CONTENT DIVS -->
+
+		<!------------------ KLZ ----------------->
+		<div class="ui raised container segment" id="KamLAND-Zen" style="display:block">
+			<h3>KamLAND-Zen</h3>
+			<p>
+				Neutrinoless-DoubleBeta Decay is a theorized process that would prove that the neutrino is it's own anti-particle, a Majorana particle. The Kamioka Liquid Scintillator Antineutrino Detector (KamLAND) is a Liquid Scintillator-based calorimeter detector searching for this new physical process. The detector is located in the Kamioka Observatory in Japan's Gifu prefecture. Detector description
+			</p>
+			<p>
+				upcoming result
+			</p>
+			<p>
+				my work, machine-learning analysis, simulation-development, rat-pac
+			</p>
+		</div>
+
+		<!---------------- THEIA ---------------->
+		<div class="ui raised container segment" id="THEIA" style="display:none">
+			<h3>THEIA</h3>
+			<p>
+				THEIA is a proposed kiloton-scale Water-Based Liquid Scinitallor (WbLS) detector. Should THEIA be placed in one of the unused Deep Underground Neutrino Experiment (DUNE) caverns, it could share the Long-Baseline Neutrino Facility (LBNF) beam from Fermilab, and provide complementary neutrino measurements. THEIA's primary scientific goals would be to measure neutrino oscillation parameters/neutrino CP violation, search for nucleon decays particularly in the difficult p → K+ + ν and N → 3ν modes, observe important solar neutrino signals, and much more.
+			</p>
+			<p>
+				Machine Learning will play a crucial role in analyzing the THEIA dataset. The LBNF beam will be the most intense neutrino beam ever constructed and THEIA's analysis tools will need to keep up with the beam luminosity while observing unrelated rare backgrounds/signals. 
+			</p>
+			<p>
+				In order to investigate the effectiveness of Machine Learning techniques in a future THEIA detector, I've developed simulations of a possible THEIA configuration, a rectangular 50 kton detector. Using rat-pac, a GEANT4/GLG4Sim wrapper software package, I have simulated various different signals related to the LBNF DUNE beam. I then developed and trained simple machine learning models to classify/identify the simulated physics events to their respective physical phenomena. Early attempts at particle identification have been successful.
+			</p>
+			<!-- Pictures : THEIA outside, THEIA simulation (tracks), 2D event display (multi-particle event), ML? (network?) -->
+		</div>
+		
+		<!-------------------- CMS ---------------------->
+		<div class="ui raised container segment" id="CMS-NIM+" style="display:none">
+			<p>
+				CERN's Large Hadron Collider is undergoing an upgrade to become the High-Luminosity LHC. In order to prepare for this upgrade, the CMS experiment has developed the High-Granularity Calorimeter (HG-Cal). The new CMS calorimetry was designed to overcome two enormous challenges, radiation tolerance, and unprecedented in-time event pileup. HG-Cal will consist of hundreds of thousands of 8-inch hexagonal 320 µm-thick silicon sensor modules. I am working to develop a testing & QC stand to be deployed at HG-Cal testing stations at CMS-partner institutions around the world.
+			</p>
+			<p>
+				With Boston University Prof. Lawrence Sulak's guidance, I have developed a HG-Cal test stand based around a Xilinx FPGA on a Digilent ZedBoard. The front-end electronics is handled by a daughter card developed by our colleagues at Fermilab. The HG-Cal test stand also serves as a proof of concept for an important electronics upgrade; not only for CMS, but for beamlines around the world. The upgrade is replacing out-dated, difficult-to-use NIMs (Nuclear Instrumentation Modules) with NIM+, a modular, FPGA-based standard.
+			</p>
+			<p>
+				Traditional NIMs were mostly developed in the 1970's; the NIM standard defined mechanical and electrical specifications for electronic modules used in experimental particle and nuclear physics. Modules had pre-defined (literally "baked in") functions, and parameters could only be adjust manually, often with the turning of dials or screws. Thus, NIMs often could not be adjusted precisely. The difficulty of using and adjusting NIMs required highly-skilled and experienced technicians. Furthermore, manufacturers are steadily abondoning NIMs, and laboratories around the world are running out of replacement modules. NIM has been called "CERN's greatest technical vulnerability". In recent years, FPGAs have been looked to as a promising replacement technology.
+			</p>
+			<p>
+				The FPGA-based NIM+ seeks to address the core weaknesses of traditional NIMs. FPGA's can be reprogrammed in the field; hence, "Field Programmable Gate Arrays". Just by downloading a file, a NIM+ module can take on new functions. Similarly rather than require a skilled technician, operational parameters, such as thresholds, pulse widths, output logic, etc, can be precisely adjusted by a computer. NIM+ modules can also be easily reproduced. If they are built using off-the-shelf FPGAs or FPGA boards, the user would only need to download a configuartion file to reprogram the NIM+ modules.
+			</p>
+			<p>
+				The BU (Boston University) developed HG-Cal test stand uses a prototype NIM+ module to quickly (nanosecond-scale) discriminate signals from HG-Cal modules and external PMTs. Then the FPGA looks for different combinations of coincident input pulses from cosmic-ray muons, test beam particles, or radioactive sources. Finally, the test-stand sends output pulses based on these coincindent signals.
+			</p>
+			<!-- working with CMS team at CERN and Fermilab, getting advice, deploying to test sites soon -->
+			<!-- HL LHC TO begin data taking in 2027 -->
+		</div>
+		<div class="ui raised container segment" id="AboutMe" style="display:none">AboutMe</div>
+		<div class="ui raised container segment" id="CV" style="display:none">CV</div>
+		<br>
+		
+	</body>
+</html>
